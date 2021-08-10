@@ -1,0 +1,7 @@
+{
+  "api":{
+    "dev":{
+      "test-api":"http://localhost:3000" 
+    }
+  }
+}

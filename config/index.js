@@ -1,3 +1,5 @@
+const path = require('path')
+
 const config = {
   projectName: 'my-music',
   date: '2021-8-7',
@@ -7,6 +9,7 @@ const config = {
     750: 1,
     828: 1.81 / 2
   },
+
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [],
@@ -14,6 +17,8 @@ const config = {
   },
   copy: {
     patterns: [
+      { from:'src/assets/icons/',to:'dist/assets/icons/'},
+      { from:'src/assets/images/',to:'dist/assets/images/'}
     ],
     options: {
     }
@@ -59,6 +64,19 @@ const config = {
         }
       }
     }
+  },
+  alias:{
+    '@/api':path.resolve(__dirname, '..' ,'src/api'),
+    '@assets':path.resolve(__dirname, '..', 'src/assets'),
+    '@components':path.resolve(__dirname,'..','src/components'),
+    '@actions':path.resolve(__dirname,'..','src/actions'),
+    '@config':path.resolve(__dirname,'..','src/config'),
+    '@constants':path.resolve(__dirname,'..','src/constants'),
+    '@data':path.resolve(__dirname,'..','src/data'),
+    '@pages':path.resolve(__dirname,'..','src/pages'),
+    '@reducers':path.resolve(__dirname,'..','src/reducers'),
+    '@style':path.resolve(__dirname,'..','src/style'),
+    '@utils':path.resolve(__dirname,'..','src/utils')
   }
 }
 

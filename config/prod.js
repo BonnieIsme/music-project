@@ -14,5 +14,8 @@ module.exports = {
      *     .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin, [])
      * }
      */
-  }
+  },
+  env:{
+    NODE_ENV:'"production"'
+  },
 }
