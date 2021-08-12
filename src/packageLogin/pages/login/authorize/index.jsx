@@ -19,10 +19,10 @@ class Login extends Component {
         }}
         ></Image>
         <View className='login-box'>
-          <View className='login-btn'>
+          <View className='login-btn' onClick={()=>wx.navigateTo({url:'/packageLogin/pages/login/phone/index'})}>
           手机登录
         </View>
-        <View className='login-btn'>
+        <View className='login-btn' onClick={()=>wx.navigateTo({url:'/packageLogin/pages/login/email/index'})}>
           邮箱登录
         </View>
         </View>

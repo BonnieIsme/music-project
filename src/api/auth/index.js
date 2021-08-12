@@ -2,11 +2,11 @@ import {get} from '../../utils/request'
 
 // 手机登录
 export function loginByPhone({phone,password}){
-  const params = {
+  const data = {
     phone,
     password
   }
-  return get('/login/cellphone',params)
+  return get({url:`/login/cellphone?phone=${phone}&password=${password}`})
 }
 
 // 邮箱登录

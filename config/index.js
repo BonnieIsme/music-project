@@ -66,7 +66,7 @@ const config = {
     }
   },
   alias:{
-    '@/api':path.resolve(__dirname, '..' ,'src/api'),
+    '@api':path.resolve(__dirname, '..' ,'src/api'),
     '@assets':path.resolve(__dirname, '..', 'src/assets'),
     '@components':path.resolve(__dirname,'..','src/components'),
     '@actions':path.resolve(__dirname,'..','src/actions'),
@@ -76,7 +76,9 @@ const config = {
     '@pages':path.resolve(__dirname,'..','src/pages'),
     '@reducers':path.resolve(__dirname,'..','src/reducers'),
     '@style':path.resolve(__dirname,'..','src/style'),
-    '@utils':path.resolve(__dirname,'..','src/utils')
+    '@utils':path.resolve(__dirname,'..','src/utils'),
+    '@packageLogin':path.resolve(__dirname,'..','src/packageLogin'),
+
   }
 }
 

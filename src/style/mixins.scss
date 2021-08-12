@@ -13,3 +13,10 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin base-page {
+  width: 100vw;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #FAFBFC;
+}

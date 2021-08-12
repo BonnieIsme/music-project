@@ -76,7 +76,7 @@ class App extends Component {
     subPackages:[
       {
         root:'packageLogin',
-        pages:['pages/login/authorize/index']
+        pages:['pages/login/authorize/index','pages/login/phone/index','pages/login/email/index']
       }
     ]
   }

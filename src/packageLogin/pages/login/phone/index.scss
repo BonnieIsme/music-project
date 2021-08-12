@@ -1,0 +1,83 @@
+@import '@style/mixins';
+@import '@style/variables';
+.phone-login {
+  @include base-page;
+  @include flex-col;
+  justify-content: start;
+  align-items: center;
+  font-size: 1rem;
+  height: 100vh
+}
+
+.input-box{
+  @include flex-row;
+  width: 60vw;
+  height: 80px;
+  padding: 0 5px;
+  margin-top: 40px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid $base-color;
+  border-radius: 12px;
+
+
+  .input-content{
+    display: inline-block;
+    margin: 0 5px;
+    font-size: .8rem;
+  }
+}
+
+.login-form {
+  @include flex-center;
+  margin-top: 15vh;
+  width: 100vw;
+  height: 220px;
+}
+
+.bottom-tips{
+  @include flex-row;
+  width: 60vw;
+  margin-top: 20px;
+  padding: 0 10px;
+  justify-content: space-between;
+  // align-items: center;
+
+  Text {
+    display: inline-block;
+    color: rgb(168, 166, 166);
+    font-size: .6rem;
+  }
+}
+
+.btn-groups {
+  @include flex-row;
+  width: 60vw;
+  margin-top: 40px;
+
+  justify-content: space-around;
+  align-items: center;
+
+  .login-submit-btn{
+    color: #fff;
+    width: 180px;
+    height: 65px;
+    text-align: center;
+    line-height: 65px;
+    font-size: .8rem;
+    border:1px solid $base-color;
+    background-color: $base-color;
+  }
+
+  .reset-btn{
+    width: 180px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    color: $base-color;
+    font-size: .8rem;
+    border:1px solid $base-color;
+    background-color: #fff;
+  }
+}

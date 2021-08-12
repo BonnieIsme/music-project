@@ -13,6 +13,7 @@
       "@reducers/*": ["src/reducers/*"],
       "@style/*": ["src/style/*"],
       "@utils/*": ["src/utils/*"],
+      "@packageLogin/*":["src/packageLogin/*"]
     }
   },
   "exclude": ["node_modules", "dist"]

@@ -1,4 +1,35 @@
 // 设置全局scss
-page {
-  font-size: 16px;
+@font-face {
+  font-family: 'iconfont';  /* Project id 2734372 */
+  src: url('//at.alicdn.com/t/font_2734372_4a6uojs267h.woff2?t=1628647012821') format('woff2'),
+       url('//at.alicdn.com/t/font_2734372_4a6uojs267h.woff?t=1628647012821') format('woff'),
+       url('//at.alicdn.com/t/font_2734372_4a6uojs267h.ttf?t=1628647012821') format('truetype');
 }
+
+.iconfont{
+  font-family: "iconfont" !important;
+  font-style: normal;
+  font-size: inherit;
+}
+
+page {
+  font-size: 32px;
+}
+
+.icon-phone::before{
+  content: '\e612';
+  color: #d14038;
+}
+
+.icon-email::before{
+  content: '\e678';
+  color: #d14038;
+}
+
+.icon-password::before {
+  content: '\e673';
+  color: #d14038;
+}
+
+
+
