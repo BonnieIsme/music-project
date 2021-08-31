@@ -63,7 +63,7 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
   },
   alias:{
     '@api':path.resolve(__dirname, '..' ,'src/api'),

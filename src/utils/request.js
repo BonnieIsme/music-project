@@ -30,11 +30,6 @@ function bindRequest({url,data,header}) {
   // console.log('method',method);
   url = mappingUrl(url);
 
-  // if (data.method) {
-  //   method = data.method
-  //   delete data.method
-  // }
-
   let token = getCacheData('token')
   if (token) {
     header = {...header,token}

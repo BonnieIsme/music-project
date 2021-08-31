@@ -1,0 +1,9 @@
+@import '@style/mixins';
+
+.top-bar{
+  @include flex-row();
+  width: 100%;
+  height: 48px;
+  align-items: center;
+  justify-content: space-between;
+}

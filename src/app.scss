@@ -1,9 +1,9 @@
 // 设置全局scss
 @font-face {
   font-family: 'iconfont';  /* Project id 2734372 */
-  src: url('//at.alicdn.com/t/font_2734372_4a6uojs267h.woff2?t=1628647012821') format('woff2'),
-       url('//at.alicdn.com/t/font_2734372_4a6uojs267h.woff?t=1628647012821') format('woff'),
-       url('//at.alicdn.com/t/font_2734372_4a6uojs267h.ttf?t=1628647012821') format('truetype');
+  src: url('//at.alicdn.com/t/font_2734372_ulz62f972dg.woff2?t=1630397560685') format('woff2'),
+       url('//at.alicdn.com/t/font_2734372_ulz62f972dg.woff?t=1630397560685') format('woff'),
+       url('//at.alicdn.com/t/font_2734372_ulz62f972dg.ttf?t=1630397560685') format('truetype');
 }
 
 .iconfont{
@@ -14,6 +14,33 @@
 
 page {
   font-size: 32px;
+}
+
+.container {
+  width: 100vw;
+  // min-width: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.icon-microphone::before{
+  content: '\e63b';
+}
+
+.icon-find-micro::before{
+  content: '\e647';
+}
+
+.icon-search::before{
+  content: '\e61b';
+}
+
+.icon-menu::before{
+  content: '\e642';
 }
 
 .icon-phone::before{
