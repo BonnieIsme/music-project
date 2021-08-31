@@ -11,8 +11,7 @@ class FindPage extends Component {
   }
   
   componentDidMount(){
-    let userInfo = getCacheData('userInfo');
-    if (!userInfo) {
+    if (!getCacheData('userInfo')) {
       Taro.showToast({
         title:'请先登录',
         icon:'error',
