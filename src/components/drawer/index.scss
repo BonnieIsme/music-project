@@ -1,0 +1,31 @@
+.drawer-wrapper{
+  height: 100vh;
+  top: 0;
+  transition: left 0.3s linear;
+}
+
+.drawer-mask{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.drawer-content {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: left 0.3s ease-in;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0, .2);
+  overflow: hidden;
+  .close-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #ccc;
+  }
+}

@@ -64,6 +64,7 @@ const config = {
         }
       }
     },
+    esnextModules: ['taro-ui']
   },
   alias:{
     '@api':path.resolve(__dirname, '..' ,'src/api'),

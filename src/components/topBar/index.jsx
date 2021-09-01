@@ -5,7 +5,8 @@ import './index.scss'
 class TopBar extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = { 
+     }
   }
 
   handleLeft = (e) => {

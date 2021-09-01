@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { View,Form, Icon,Input, Button,Text } from '@tarojs/components';
 import './index.scss'
-import { loginByPhone } from '@api/auth';
+import api from '@api/index'
 import { setCacheData } from '@utils/cache';
+import { checkNumber } from '@utils/common';
 import Taro from '@tarojs/taro';
 
 class PhoneLogin extends Component {
@@ -17,9 +18,9 @@ class PhoneLogin extends Component {
     const phone = e.detail.value.phone;
     const password = e.detail.value.password;
     // console.log('submit',phone,password);
-    if (this.checkPhoneNumber(phone) && password.length >= 6) {
+    if (checkNumber(phone) && password.length >= 6) {
 
-    loginByPhone({phone,password}).then(res=>{
+    api.loginByPhone({phone,password}).then(res=>{
       // console.log(res.data);
       // console.log(res.data.token);
       // 登录成功，缓存数据，并跳转页面
@@ -54,15 +55,6 @@ class PhoneLogin extends Component {
     }
 
 
-  }
-
-  // 校验用户登录手机号
-  checkPhoneNumber = (phone)=>{
-    if ((/1[3-9]{4}[0-9]{6}/).test(phone)) {
-      return true
-    }else{
-      return false
-    }
   }
 
   render() { 
