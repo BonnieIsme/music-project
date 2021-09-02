@@ -1,10 +1,11 @@
 // 设置全局scss
 @font-face {
   font-family: 'iconfont';  /* Project id 2734372 */
-  src: url('//at.alicdn.com/t/font_2734372_ulz62f972dg.woff2?t=1630397560685') format('woff2'),
-       url('//at.alicdn.com/t/font_2734372_ulz62f972dg.woff?t=1630397560685') format('woff'),
-       url('//at.alicdn.com/t/font_2734372_ulz62f972dg.ttf?t=1630397560685') format('truetype');
+  src: url('//at.alicdn.com/t/font_2734372_9ijm6slo0i8.woff2?t=1630574336134') format('woff2'),
+       url('//at.alicdn.com/t/font_2734372_9ijm6slo0i8.woff?t=1630574336134') format('woff'),
+       url('//at.alicdn.com/t/font_2734372_9ijm6slo0i8.ttf?t=1630574336134') format('truetype');
 }
+
 
 .iconfont{
   font-family: "iconfont" !important;
@@ -25,6 +26,30 @@ page {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+}
+
+.icon-wangyi::before{
+  content: '\e650';
+}
+
+.icon-refresh::before{
+  content: '\e7d1';
+}
+
+.icon-play-outline::before{
+  content: '\e645';
+}
+
+.icon-play-media::before{
+  content: '\e72c';
+}
+
+.icon-play::before{
+  content: '\e851';
+}
+
+.icon-right::before{
+  content: '\e6c3';
 }
 
 .icon-microphone::before{

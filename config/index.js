@@ -79,6 +79,7 @@ const config = {
     '@style':path.resolve(__dirname,'..','src/style'),
     '@utils':path.resolve(__dirname,'..','src/utils'),
     '@packageLogin':path.resolve(__dirname,'..','src/packageLogin'),
+    '@mixins':path.resolve(__dirname,'..','src/mixins'),
 
   }
 }

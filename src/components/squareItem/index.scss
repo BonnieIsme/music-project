@@ -1,0 +1,29 @@
+.square-box{
+  width: 200px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+  .square-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+  }
+  .square-text{
+    width: 200px;
+    height: 40px;
+    color: #444;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // overflow: hidden;
+    // white-space: pre-wrap;
+
+  }
+}

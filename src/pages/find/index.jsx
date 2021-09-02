@@ -4,20 +4,25 @@ import api from '@api/index'
 import {getCacheData,setCacheData} from '../../utils/cache'
 import Drawer from '@components/drawer';
 import Taro from '@tarojs/taro';
+import CircleItem from '@components/circleItem';
+import SquareItem from '@components/squareItem';
+import RowList from '@components/RowList';
 
 
 import TopBar from '@components/topBar';
 import './index.scss'
+import IconText from '@components/IconText';
 
 class FindPage extends Component {
   constructor(props) {
     super(props);
     this.state = { 
       show:false,
-      pageMsg:{},
+      pageMsg:null,
       home_banners:[],
       current:0 ,// 当前轮播index,
-      circles:[]
+      circles:[],
+      recommand:[]
      }
   }
   
@@ -32,8 +37,8 @@ class FindPage extends Component {
         })
       })
     }else{
-      // 若有用户信息
-      this.initFindPage()
+       // 若有用户信息
+       this.initFindPage();
     }
   }
 
@@ -41,17 +46,26 @@ class FindPage extends Component {
     // 获取发现首页信息
     let _this = this;
     api.getFindPage().then(res=>{
-      console.log('find-page',res.data.data.blocks[0].extInfo.banners);
+      console.log('find-page',res.data.data.blocks[1].uiElement);
+      let temp = res.data.data.blocks[1]
+      // .creatives.map(item=>{
+      //   return {
+      //     resources:item.resources[0],
+      //     uiElement:item.uiElement
+      //   }
+      // })
+      console.log('temp',temp);
       _this.setState({
         pageMsg:res.data.data,
-        home_banners:res.data.data.blocks[0].extInfo.banners
+        home_banners:res.data.data.blocks[0].extInfo.banners,
+        recommand:temp
       })
     })
     api.getFindCircle().then(res=>{
-    
       _this.setState({
         circles:res.data.data
       })
+      console.log('ddd',_this.state.circles);
     })
  
     console.log('初始化首页信息');
@@ -91,8 +105,10 @@ class FindPage extends Component {
     const {
       home_banners,
       current,
-      circles
+      circles,
+      recommand
     } = this.state
+    console.log('circle',recommand);
 
     return ( 
       <View className="container find">
@@ -132,8 +148,44 @@ class FindPage extends Component {
               return <View className="swiper-dot" key={index} style={{backgroundColor:index == current ? '#FFF' : '#ECECEA'}}></View>
             })}
         </View>
-        {/* 圆形按钮列表 */}
+        <View className="circle-banner">
+          {circles && 
+          circles.map(item=><CircleItem data={item}></CircleItem>)}
+        </View>
+        { recommand && 
+          <RowList>
+            <View>推荐歌单</View>
+            <View>
+              <IconText left={false} icon='icon-right' text='更多' textColor='#000' iconColor='#000' iconSize='12px' boxStyle={{backgroundColor:'#fff',border:'1px solid #bfbfbf'}}></IconText>
+            </View>
+            <View className="list-content">
+              {
+                recommand.creatives &&
+                recommand.creatives.map((item,index)=>{
+                  return <SquareItem
+                    text='12万'
+                    icon='icon-play-outline'
+                    description='etst'
+                    imageUrl='http://p1.music.126.net/3yVWoeJ2dyujwetKm_2zOA==/109951165496141303.jpg'
+                    boxStyle={{
+                      width:'35px',
+                    }}
+                    textStyle={{
+                      fontSize:'8px',
+                      lineHeight:'8px'
+                    }}
+                    iconStyle={{
+                      fontSize:'10px'
+                    }}
+                  ></SquareItem>
+                })
+              }
+            </View>
+         </RowList>
+        }
         
+        
+
       </View>
         
 

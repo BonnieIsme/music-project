@@ -13,7 +13,8 @@
       "@reducers/*": ["src/reducers/*"],
       "@style/*": ["src/style/*"],
       "@utils/*": ["src/utils/*"],
-      "@packageLogin/*":["src/packageLogin/*"]
+      "@packageLogin/*":["src/packageLogin/*"],
+      "@mixins/*":["src/mixins/*"],
     }
   },
   "exclude": ["node_modules", "dist"]
