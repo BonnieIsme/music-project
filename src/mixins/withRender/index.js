@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+/* eslint-disable import/no-duplicates */
+/* eslint-disable no-shadow */
+import  { Component } from 'react';
 import {useState,useEffect} from 'react';
 import {View} from '@tarojs/components'
 

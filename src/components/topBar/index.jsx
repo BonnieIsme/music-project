@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { View, Icon } from '@tarojs/components';
 import './index.scss'
 
@@ -39,7 +39,7 @@ class TopBar extends Component {
 
   render() { 
     return (  
-      <View className="top-bar">
+      <View className='top-bar'>
         <View onClick={this.handleLeft}>
           <Icon className='iconfont icon-menu' style={{fontSize:'24px'}}></Icon>
         </View>

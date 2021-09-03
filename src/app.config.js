@@ -4,7 +4,8 @@ export default {
     'pages/cloud/index',
     'pages/custom/index',
     'pages/profile/index',
-    'pages/sing/index'
+    'pages/sing/index',
+    'pages/web/index'
   ],
   window: {
     backgroundTextStyle: 'light',

@@ -1,33 +1,61 @@
-import React, { Component } from 'react';
-import { View,Icon,Text } from '@tarojs/components';
+import { View,Icon } from '@tarojs/components';
+import { useState } from 'react';
 import './index.scss'
+
 export default function IconText(props) {
   const { 
     icon,
-    iconColor = '#fff',
-    iconSize = '18px',
-    iconStyle,
     text,
-    textColor = '#fff',
-    textSize = '12px',
-    textStyle,
-    boxStyle,
-    left = true
+    left = true,
+    type = 'whiteMiddle'
   } = props
 
+  // eslint-disable-next-line no-unused-vars
+  const [btnTypes, setBtnTypes] = useState({
+    'whiteMiddle': {
+      textStyle: {
+        textColor: '#000',
+        textSize: '12px'
+      },
+      iconStyle: {
+        iconColor: '#000',
+        iconSize: '12px'
+      },
+      boxStyle: {
+        backgroundColor:'#fff'
+      }
+      
+    },
+    'opacityTiny': {
+      textStyle: {
+        textColor: '#fff',
+        textSize: '10px'
+      },
+      iconStyle: {
+        iconColor: '#fff',
+        iconSize: '10px'
+      },
+      boxStyle: {
+        backgroundColor: 'rgba($color: #fff, $alpha: 0.8)',
+        opacity: '0.8',
+        border: 'none'
+      }
+    }
+  })
+
   return (
-    <View className="text-box" style={boxStyle}>
+    <View className='text-box' style={{...btnTypes[type].boxStyle}}>
       { left &&
         <Icon 
-        className={`iconfont text-icon ${icon}`}
-        style={{fontSize:iconSize,color:iconColor, ...iconStyle}}
+          className={`iconfont text-icon ${icon}`}
+          style={{...btnTypes[type].iconStyle}}
         ></Icon>
       }
-      <Text className='text' style={{color:textColor,fontSize:textSize,lineHeight:textSize ,...textStyle}}>{text}</Text>
+      <View className='text' style={{...btnTypes[type].textStyle}}>{text}</View>
       { !left &&
         <Icon 
-        className={`iconfont text-icon ${icon}`}
-        style={{fontSize:iconSize,color:iconColor, ...iconStyle}}
+          className={`iconfont text-icon ${icon}`}
+          style={{...btnTypes[type].iconStyle}}
         ></Icon>
       }
     </View>

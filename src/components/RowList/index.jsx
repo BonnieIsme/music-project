@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import { View } from '@tarojs/components';
 import './index.scss'
 
@@ -8,6 +7,7 @@ export default function RowList(props) {
   } = props
 
   const handleLeft = ()=>{
+    // eslint-disable-next-line no-shadow
     const { handleLeft } = props
     if (handleLeft) {
       handleLeft()
@@ -15,6 +15,7 @@ export default function RowList(props) {
   }
 
   const handleRight = () => {
+    // eslint-disable-next-line no-shadow
     const {handleRight} = props
     if (handleRight) {
       handleRight()
@@ -23,7 +24,7 @@ export default function RowList(props) {
 
   return (
     <View className='list'>
-      <View className="list-top">
+      <View className='list-top'>
         <View className='left' onClick={handleLeft}>
           {children[0]}
         </View>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import { Provider } from 'react-redux'
 import Taro from '@tarojs/taro'
@@ -27,7 +28,8 @@ class App extends Component {
       'pages/cloud/index',
       'pages/custom/index',
       'pages/profile/index',
-      'pages/sing/index'
+      'pages/sing/index',
+      'pages/web/index'
     ],
     window: {
       backgroundTextStyle: 'light',

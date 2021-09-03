@@ -2,10 +2,11 @@
  * 封装api
  */
 import Taro from '@tarojs/taro'
-import { getCacheData, setCacheData } from "./cache";
+import { getCacheData } from "./cache";
 import { env } from '../config/env.json';
 
 
+// eslint-disable-next-line import/no-commonjs
 const hosts = require('../data/hosts.json')
 
 function judgeAndGetHosts() {

@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import { View,Image } from '@tarojs/components';
 import './index.scss'
 
@@ -11,15 +10,13 @@ function Item(props) {
   }
 
   return (
-    <View className="circle-box" onClick={handleClick}>
-      <View className="circle-img">
+    <View className='circle-box' onClick={handleClick}>
+      <View className='circle-img'>
         <Image src={data.iconUrl}></Image>
       </View>
-      <View className="circle-text">{data.name}</View>
+      <View className='circle-text'>{data.name}</View>
     </View>
   )
 }
-
-
 
 export default Item
